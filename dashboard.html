@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEN 211|G3 - Flight Management System - Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow-y: auto;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .airline-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            margin-left: -10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            padding: 80px 30px 30px; /* Adjusted padding */
+            box-sizing: border-box;
+            text-align: center;
+            margin-top: 80px; /* Adjusted margin */
+        }
+
+        .dashboard-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .dashboard-item h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-item p {
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: calc(50% - 20px); /* Two cards per row */
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://www.pngmart.com/files/4/Airplane-PNG-Transparent-Image.png" alt="Airplane" class="logo">
+            <p class="airline-name">SEN 211-GX Airline</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="dashboard-item">
+            <h2>Active Flights</h2>
+            <p>Number of Active Flights: <span id="activeFlights">5</span></p>
+        </div>
+        <div class="dashboard-item">
+            <h2>Scheduled Flights</h2>
+            <p>Number of Scheduled Flights: <span id="scheduledFlights">10</span></p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <h2>Special Offers</h2>
+                <p>Check out our latest special offers on flights!</p>
+                <a href="special-offers.html" class="button">View Offers</a>
+            </div>
+            <div class="card">
+                <h2>Passenger List</h2>
+                <p>View and manage the list of passengers.</p>
+                <a href="passenger-list.html" class="button">View Passenger List</a>
+            </div>
+        </div>
+    </div>
+
+    <p><a href="login.html">Logout</a></p>
+</body>
+</html>

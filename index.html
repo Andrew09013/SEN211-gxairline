@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEN 211|G3 - Flight Management System - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .logo-container {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 5px;
+        }
+
+        .airline-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button.login-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        button.login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        button.group-btn {
+            padding: 10px 20px; /* Adjusted padding */
+            border: none;
+            border-radius: 25px; /* Increased border radius */
+            background-color: #bbb;
+            color: #333;
+            font-size: 12px; /* Reduced font size */
+            cursor: pointer;
+        }
+
+        button.group-btn:hover {
+            background-color: #999;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://www.pngmart.com/files/4/Airplane-PNG-Transparent-Image.png" alt="Airplane" class="logo">
+        <p class="airline-name">SEN 211-GX Airline</p>
+    </div>
+    <div class="container">
+        <form id="loginForm" onsubmit="return validateForm()">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button class="login-btn" type="submit">Login</button>
+            <p class="error-message" id="errorMessage"></p>
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </form>
+    </div>
+    <div style="padding-top: 15px;"> <!-- Added padding -->
+        <a href="groupdevs.html"><button class="group-btn">Group Devs</button></a>
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("errorMessage");
+
+            if (email === "sen211gxairline@unidel.com" && password === "12345678") {
+                window.location.href = "dashboard.html"; // Redirect to dashboard page
+                return false; // Prevent form submission
+            } else if (email === "" || password === "") {
+                errorMessage.textContent = "Please fill in all fields.";
+                return false;
+            } else {
+                errorMessage.textContent = "Invalid email or password.";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
